@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #83c2ff;
+  display: inline-block;
+  padding: 0 6px;
+}
+
+a:hover {
+  color: #b6dbff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+body {
+  background-color: #111;
+  color: #dbdbdb;
+}
+
+body,
+html,
+#main {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.container {
+  background-color: #111;
+  overflow-y: scroll;
+  padding: 60px;
+  padding-top: none;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  text-align: center;
+}
+
+figcaption {
+  background: #111;
+  bottom: 80px;
+  color: #dbdbdb;
+  font-size: 11px;
+  left: -55px;
+  opacity: 0.7;
+  padding: 5px;
+  position: fixed;
+  transform: rotate(270deg);
+}
+
+hr {
+  animation: sectionAppear 3s ease-in;
+  border: none;
+  border-bottom: 1px dashed #dbdbdb;
+  margin: 70px 0;
+}
+
+img {
+  animation: sectionAppear 1s ease-in;
+  display: block;
+  max-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+#main {
+  display: grid;
+  grid-template: 1fr/1fr 1fr;
+  margin: 0 auto;
+  max-width: 1500px;
+}
+
+p {
+  line-height: 1.7em;
+}
+
+.section {
+  animation: sectionAppear 1s ease-in;
+  display: none;
+}
+
+#tribute-info {
+  padding: 30px;
+}
+
+ul {
+  margin: 0 auto;
+  padding: 0;
+  width: 80%;
+}
+
+ul li {
+  margin: 20px 0;
+}
+
+@media (max-width: 1200px) {
+  #main {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    overflow-y: visible;
+  }
+}
+@media (max-width: 800px) {
+  .container {
+    padding: 30px;
+    width: 800px;
+  }
+
+  hr {
+    margin: 30px;
+  }
+}
+@media (max-width: 575px) {
+  .container {
+    padding: 30px;
+    width: 450px;
+  }
+
+  hr {
+    margin: 30px;
+  }
+}
+@media (max-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 30px;
+    width: 400px;
+  }
+
+  hr {
+    margin: 30px;
+  }
+
+  figcaption {
+    float: left;
+  }
+
+  #tribute-info {
+    padding: 0px;
+  }
+}
+@media (max-width: 300px) {
+  img {
+    border: 1px solid lime;
+  }
+}
+@keyframes sectionAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
